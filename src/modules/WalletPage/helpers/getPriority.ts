@@ -1,0 +1,18 @@
+import { LEAST_PRIORITY } from "../constants";
+
+export const getPriority = (blockchain: any): number => {
+  switch (blockchain) {
+    case 'Osmosis':
+      return 100;
+    case 'Ethereum':
+      return 50;
+    case 'Arbitrum':
+      return 30;
+    case 'Zilliqa':
+      return 20;
+    case 'Neo':
+      return 20;
+    default:
+      return LEAST_PRIORITY;
+  }
+};
